@@ -1,6 +1,8 @@
 // Aggancio il bottone e la griglia a Java Script
 const button = document.getElementById("start-button");
 const grid = document.getElementById("grid");
+let bombsNumbers = [];
+let finalScore;
 
 // Dò al bottone l'evento del click per generare la griglia.
 button.addEventListener("click", function () {
@@ -8,12 +10,13 @@ button.addEventListener("click", function () {
   gridGenerator(); //** Aggancio alla funzione */
 
   //! Al click genero 16 numeri casuali da 1 a 100..
-  const bombsNumbers = [];
 
-  for (let i = 0; i < 16; i++) {
-    bombsNumbers.push(Math.floor(Math.random() * (100 - 1) + 1));
+  while (bombsNumbers.length < 16) {
+    const randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
+    if (!bombsNumbers.includes(randomNumber)) {
+      bombsNumbers.push(randomNumber);
+    }
   }
-
   console.log(bombsNumbers);
 });
 
@@ -36,11 +39,22 @@ function cellGenerator(i) {
   cell.innerHTML = i;
 
   cell.addEventListener("click", function () {
-    this.classList.add("lightskyblue");
+    if (bombsNumbers.includes(i)) {
+      this.classList.add("redbomb");
+      alert("Hai Perso! Riavvia la pagina e rigioca!");
+      /* grid.innerHTML = ""; */
+    } else {
+      this.classList.add("lightskyblue");
+    }
     console.log(i);
   });
 
   return cell;
 }
 
-//! generare 16 numeri casuali da 1 a 100
+// Se il numero cliccato è presente nell'array, e verrà colorato di rosso...
+//allora verrà colorato di rosso e appare un alert "hai perso"
+// altrimenti si continua a cliccare e i tasti diventano blu
+
+//per il punteggio, dovrei aggiungere ogni elemento cliccato ad
+//un array e poi mostrare il risultato finale su schermo...
