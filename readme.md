@@ -27,9 +27,8 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
   3.  provo a farli stampare in console al click del bottone..
 
 - L'utente clicca su una cella: se (if) il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba e la cella si colora di rosso e la partita è terminata.
-
 - Altrimenti (else) la cella si colora di azzurro e l'utente può continuare a cliccare le altre celle.
-
+  - Quindi, devo fare in modo che se l'utente clicca in uno dei numeri presenti nell'array, ai numeri viene assegnato il colore rosso, altrimenti il blu.
 - La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 
 - Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l'utente ha cliccato su una cella che non era una bomba.
