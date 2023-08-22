@@ -2,7 +2,7 @@
 const button = document.getElementById("start-button");
 const grid = document.getElementById("grid");
 let bombsNumbers = [];
-let finalScore;
+let finalScore = 0;
 
 // Dò al bottone l'evento del click per generare la griglia.
 button.addEventListener("click", function () {
@@ -45,6 +45,10 @@ function cellGenerator(i) {
       /* grid.innerHTML = ""; */
     } else {
       this.classList.add("lightskyblue");
+      finalScore++;
+      if (finalScore == 100 - 16) {
+        alert("complimenti, hai vinto!" + finalScore);
+      }
     }
     console.log(i);
   });
