@@ -6,6 +6,15 @@ const grid = document.getElementById("grid");
 button.addEventListener("click", function () {
   grid.innerHTML = ""; //! Per svuotare al click */
   gridGenerator(); //** Aggancio alla funzione */
+
+  //! Al click genero 16 numeri casuali da 1 a 100..
+  const bombsNumbers = [];
+
+  for (let i = 0; i < 16; i++) {
+    bombsNumbers.push(Math.floor(Math.random() * (100 - 1) + 1));
+  }
+
+  console.log(bombsNumbers);
 });
 
 // Creo la funzione per generare la griglia in modo riciclabile
@@ -34,4 +43,4 @@ function cellGenerator(i) {
   return cell;
 }
 
-//! Provo ad aggiungere i livelli di difficoltà...
+//! generare 16 numeri casuali da 1 a 100

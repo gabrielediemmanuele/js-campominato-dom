@@ -18,9 +18,13 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 ## Steps
 
-- Il computer deve generare 16 numeri casuali nello stesso "range" della difficoltà prescelta e saranno le "bombe".
+- Il computer deve generare 16 numeri casuali nello stesso "range" della difficoltà prescelta e saranno le "bombe". (Nel mio caso non ho solo un livello di difficoltà: Facile).
 
   - Per generare i numeri random , utilizare il math.floor / math.random
+
+  1.  creo una costante che sarà uguale ai numeri generati.
+  2.  creo un math.random che genera 16 numeri in un range di 100 numeri.
+  3.  provo a farli stampare in console al click del bottone..
 
 - L'utente clicca su una cella: se (if) il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba e la cella si colora di rosso e la partita è terminata.
 
