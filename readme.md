@@ -19,7 +19,9 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 ## Steps
 
 - Il computer deve generare 16 numeri casuali nello stesso "range" della difficoltà prescelta e saranno le "bombe".
+
   - Per generare i numeri random , utilizare il math.floor / math.random
+
 - L'utente clicca su una cella: se (if) il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba e la cella si colora di rosso e la partita è terminata.
 
 - Altrimenti (else) la cella si colora di azzurro e l'utente può continuare a cliccare le altre celle.
@@ -29,3 +31,5 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l'utente ha cliccato su una cella che non era una bomba.
 
 ## Step Bonus
+
+////
