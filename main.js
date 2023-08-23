@@ -41,13 +41,15 @@ function cellGenerator(i) {
   cell.addEventListener("click", function () {
     if (bombsNumbers.includes(i)) {
       this.classList.add("redbomb");
-      alert("Hai Perso! Riavvia la pagina e rigioca!");
+      alert(
+        "Hai Perso! Riavvia la pagina e rigioca! " + "Score: " + finalScore
+      );
       /* grid.innerHTML = ""; */
     } else {
       this.classList.add("lightskyblue");
       finalScore++;
       if (finalScore == 100 - 16) {
-        alert("complimenti, hai vinto!" + finalScore);
+        alert("complimenti, hai vinto! " + "Score: " + finalScore);
       }
     }
     console.log(i);
